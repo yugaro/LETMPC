@@ -28,8 +28,8 @@ def set_args():
     parser.add_argument("--v_max", type=float, default=3)
     parser.add_argument("--omega_max", type=float, default=np.pi)
     parser.add_argument("--terminalset", type=float,
-                        default=[0.1, 0.1, 0.1])
-    parser.add_argument("--step_max", type=int, default=50)
+                        default=[0.01, 0.01, 0.01])
+    parser.add_argument("--step_max", type=int, default=40)
 
     # params of trigger
     parser.add_argument("--gamma", type=float, default=[0.1, 0.1, 0.1])

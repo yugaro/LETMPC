@@ -39,8 +39,8 @@ def trackTrajPlot(ref_traj, track_traj):
 if __name__ == '__main__':
     args = set_args()
     vehicle = Vehicle(args)
-    xreal_traj = np.load('../data/xreal_traj_trigger_iter0.npy')
-    # xreal_traj = np.load('../data/xreal_traj_periodic.npy')
+    # xreal_traj = np.load('../data/xreal_traj_trigger_iter0.npy')
+    xreal_traj = np.load('../data/xreal_traj_periodic.npy')
     ref_traj = refTrajF(args, vehicle, xreal_traj)
     track_traj = trackTrajF(ref_traj, xreal_traj)
     trackTrajPlot(ref_traj, track_traj)

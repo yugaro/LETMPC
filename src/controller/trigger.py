@@ -45,7 +45,7 @@ class Trigger:
             prob_psi = cp.Problem(cp.Maximize(psi_func), constranits)
             prob_psi.solve(solver=cp.MOSEK)
 
-            # print(prob_psi.status)
+            print(prob_psi.status)
             if prob_psi.status == 'infeasible':
                 return prob_psi.status, 0
             psi_next = psi.value

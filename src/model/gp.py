@@ -43,14 +43,11 @@ class GP:
         print(self.beta)
 
     def betaF(self, i):
-        datanum = 30
-        # datanum = self.cov[i].shape[0]
         betatmp = self.b[i] ** 2 - self.y_train[:, i] @ np.linalg.inv(
-            self.cov[i]) @ self.y_train[:, i] + datanum
+            self.cov[i]) @ self.y_train[:, i] + self.cov[i].shape[0]
         if betatmp < 0:
             return 1
         return np.sqrt(betatmp)
-        # return 1
 
     def predict(self, z_test):
         means = np.zeros(self.y_train.shape[1])

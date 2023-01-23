@@ -18,7 +18,7 @@ if __name__ == '__main__':
     z_train = np.load(args.datafile_z)
     y_train = np.load(args.datafile_y)
 
-    for iter in range(2):
+    for iter in range(10):
         # show data
         print('iter:', iter)
         print('number of data points:', z_train.shape[0])
@@ -37,7 +37,7 @@ if __name__ == '__main__':
         # xinit = np.array([posinit[0], posinit[1], thetainit])
         # xinit = np.array([np.random.rand() - 3, np.random.rand() - 3, np.pi * np.random.rand()])
         xinit = np.array(
-            [np.random.rand() - 3, np.random.rand() - 3, np.pi])
+            [np.random.rand() - 2, np.random.rand() - 2, np.pi])
 
         # set initial state and step
         xreal = xinit
